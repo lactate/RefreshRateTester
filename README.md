@@ -1,11 +1,8 @@
-RefreshRateMultitool
+RefreshRateTester
 ====================
 
-**Online Version:** There is a version of this tool (and many more useful ones) that runs in your browser, and is actively maintained. I recommend you use it instead:
-
-https://www.testufo.com/#test=frameskipping
-
-RefreshRateMultitool displays a sequence of easily distinguishable images at the rate of your monitor's refresh rate.
+This is a slightly modified version of shurcooL's RefreshRateMultitool.
+This program displays images in sync with your monitor's refresh rate so you can test for frameskipping and artifacts.
 
 ![RefreshRateMultitool in action, except the real thing runs much faster](https://dmitri.shuralyov.com/projects/RefreshRateMultitool/images/RefreshRateMultitool.gif)
 
@@ -15,12 +12,12 @@ Usage: RefreshRateMultitool.exe [columns rows]
  -row     - if specified, sets the number of rows, default 1
 ```
 
-This can be useful for a number of things:
+This tool is more performant and consistent than browser-based tests.
+See https://github.com/shurcooL-legacy/RefreshRateMultitool for more information.
 
--	Finding out the input lag of a monitor more precisely
--	Finding out if your monitor is actually dropping some of the input frames (e.g. monitor running in a 85 hz mode, but only displaying 60 frames/second, while dropping the other 25 every second)
--	Finding out the black-to-white and white-to-black pixel response times
-
-See more advanced use cases and discussion of the tool [here](https://hardforum.com/showthread.php?t=1423433).
-
-WARNING: This application will display FLASHING IMAGES.
+Version 1.0
+- Removed requirement for user to type "i agree" on launch
+- Defaults to 6x10 grid
+- Defaults to larger window size
+- Minor documentation changes
+- Executable provided for Windows only
