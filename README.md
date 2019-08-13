@@ -4,7 +4,7 @@ RefreshRateTester
 This is a slightly modified version of shurcooL's RefreshRateMultitool.
 This program displays images in sync with your monitor's refresh rate so you can test for frameskipping and artifacts.
 
-![RefreshRateMultitool in action, except the real thing runs much faster](https://i.imgur.com/5P5632i.gif)
+![RefreshRateTester](https://i.imgur.com/5P5632i.gif)
 
 ```
 Usage: RefreshRateMultitool.exe [columns rows]
