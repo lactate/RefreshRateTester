@@ -7,9 +7,7 @@ This program displays images in sync with your monitor's refresh rate so you can
 ![RefreshRateTester](https://i.imgur.com/5P5632i.gif)
 
 ```
-Usage: RefreshRateMultitool.exe [columns rows]
- -columns - if specified, sets the number of columns, default 6
- -row     - if specified, sets the number of rows, default 1
+Usage: Run RefreshRateTester.exe
 ```
 
 This tool is more performant and consistent than browser-based tests.
