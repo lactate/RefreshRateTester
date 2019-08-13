@@ -3,13 +3,15 @@
 #include <sstream>
 #include <GL/glfw.h>
 
-const char * szTitle = "RefreshRateMultitool, Version 0.12";
-#define DEFAULT_WIDTH 320
-#define DEFAULT_HEIGHT 200
+#define DEFAULT_WIDTH 600
+#define DEFAULT_HEIGHT 320
+#define GLFW_DLL
+
+const char * szTitle = "RefreshRateTester v1.0";
 
 volatile bool running = true;
 
-void GLFWCALL ProcessKey(int nKey, int nAction)
+void ProcessKey(int nKey, int nAction)
 {
 	if (GLFW_RELEASE == nAction)
 	{
@@ -17,9 +19,9 @@ void GLFWCALL ProcessKey(int nKey, int nAction)
 	}
 }
 
-void GLFWCALL ProcessWindowSize(int nWindowWidth, int nWindowHeight)
+void ProcessWindowSize(int nWindowWidth, int nWindowHeight)
 {
-	//printf("Window size set to %dx%d.\n", nWindowWidth, nWindowHeight);
+	printf("Window size set to %dx%d.\n", nWindowWidth, nWindowHeight);
 
 	glViewport(0, 0, nWindowWidth, nWindowHeight);
 
@@ -35,34 +37,35 @@ int main(int argc, char * argv[])
 	printf("%s\n", szTitle);
 	printf("\n");
 	printf("WARNING: This application will produce FLASHING IMAGES to test your screen(s)!\n");
-	printf("\n");
-	printf("If getting a seizure is a risk for you, close this window and do not proceed.\n");
-	printf("If you take the responsibility upon yourself, enter the two words 'I agree' and\n");
-	printf("press enter.\n");
+	printf("For accurate results, please disable any other connected displays.\n");
+//	printf("\n");
+//	printf("If getting a seizure is a risk for you, close this window and do not proceed.\n");
+//	printf("If you take the responsibility upon yourself, enter the two words 'I agree' and\n");
+//	printf("press enter.\n");
 	printf("\n");
 	printf("Once started, press any key to quit.\n");
 	printf("\n");
 
 	char userText[100];
-	std::fgets(userText, 10, stdin);
+//	std::fgets(userText, 10, stdin);
 
 	// Initialize GLFW
 	glfwInit();
 
-	if (false == (strcmp(userText, "I agree\n")   == 0 || strcmp(userText, "i agree\n")   == 0
-			   || strcmp(userText, "\'I agree\'") == 0 || strcmp(userText, "\'i agree\'") == 0
-			   || strcmp(userText, "\"I agree\"") == 0 || strcmp(userText, "\"i agree\"") == 0))
-	{
-		printf("It appears you do not agree; exiting...\n");
-		glfwSleep(1);
-
-		return 0;
-	}
+//	if (false == (strcmp(userText, "I agree\n")   == 0 || strcmp(userText, "i agree\n")   == 0
+//			   || strcmp(userText, "\'I agree\'") == 0 || strcmp(userText, "\'i agree\'") == 0
+//			   || strcmp(userText, "\"I agree\"") == 0 || strcmp(userText, "\"i agree\"") == 0))
+//	{
+//		printf("It appears you do not agree; exiting...\n");
+//		glfwSleep(1);
+//
+//		return 0;
+//	}
 
 	unsigned int counter = 0;
 	//const int nRefreshRate = 60;
 	int nColumns = 6;
-	int nRows = 1;//nRefreshRate / nColumns;
+	int nRows = 10;//nRefreshRate / nColumns;
 	if (argc >= 3)
 	{
 		nColumns = std::atoi(argv[1]);
