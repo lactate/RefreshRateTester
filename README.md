@@ -13,7 +13,8 @@ Usage: RefreshRateMultitool.exe [columns rows]
 ```
 
 This tool is more performant and consistent than browser-based tests.
-See https://github.com/shurcooL-legacy/RefreshRateMultitool for more information.
+
+See https://github.com/shurcooL-legacy/RefreshRateMultitool for more information about the original project.
 
 *Do not use if sensitive to flashing lights*
 
