@@ -15,6 +15,8 @@ Usage: RefreshRateMultitool.exe [columns rows]
 This tool is more performant and consistent than browser-based tests.
 See https://github.com/shurcooL-legacy/RefreshRateMultitool for more information.
 
+*Do not use if sensitive to flashing lights*
+
 Version 1.0
 - Removed requirement for user to type "i agree" on launch
 - Defaults to 6x10 grid
